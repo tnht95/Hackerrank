@@ -17,7 +17,6 @@ func dfs(x int) int {
 	stack := []int{x}
 	visited[x] = true
 	//count the number of people from the same country
-	//everyone in 1 country has the same amount of people from other countries can be paired with
 	count := 0
 
 	for len(stack) > 0 {
@@ -34,7 +33,7 @@ func dfs(x int) int {
 
 	}
 
-	//each person in a same country can be pair with a person that is still available
+	//each person from the same country can be pair with same amount of people that are still available
 	return count * remain
 }
 
